@@ -46,7 +46,8 @@ yarn dev
 
 - create task, which accepts only a String argument called "title"
 - you can receive back any of the following listed below 
-1) mutation{
+```
+mutation{
     createTask(title: "your title"){
         id
         created
@@ -55,30 +56,37 @@ yarn dev
         title
     }
 }
-
+```
 - querying all the tasks you created
-1) {
+```
+{
     tasks{
         title
         id
         isComplete
     }
 }
-
+```
 - querying one task only by it's id 
-1) {
+```
+{
     task(id: [task id]){
         title
         isComplete
     }
 }
+```
 
 - deleting a task by its id
-1) mutation{
+```
+ mutation{
     deleteTask(id: [task id])
 }
+```
 
 - updating a task
-1) mutation{
+```
+mutation{
     task(id: [task id], isComplete: [ boolean ])
 }
+```
